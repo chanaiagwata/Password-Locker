@@ -39,7 +39,7 @@ def main():
                 print("password")
                 password_logged = input()
                 
-            while (username_logged != user_name_created or password_logged != user_name_created):
+            while (username_logged != user_name_created or password_logged != user_password_created):
                 print("inavalid! password does not match the account, try again")
                 print("username")
                 username_logged = input()
@@ -50,4 +50,31 @@ def main():
                 print('/n')
                 
         elif short_code == 'lg':
+            print("welcome!")
+            print("Enter username")
+            login_username = input()
+            print("Enter password")
+            login_password = input()
+            print('/n')
+            
+            while login_username != username_logged or login_password != password_logged:
+                print("Invalid username or password") 
+                print("Enter user name")
+                login_username = input()
+                print("Enter Password")
+                login_password = input()
+                print("/n")
+            else:
+                print("Welcome! You've been logged in successfully")
+                print('/n')
+            
+            
+            
+        elif short_code == 'ex':
+            print("Bye......")
+            break
+        else:
+            print("Wrong input. Please use the short codes")
+if __name__ == '__main__':
+    main()
             
