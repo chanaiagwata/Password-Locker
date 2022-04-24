@@ -11,3 +11,17 @@ def main():
     while True:
         print("Use these short codes: 'nu' -to create new account, 'lg' -to login into your account, 'ex' to exit password locker")
         short_code =input().lower()
+        
+        if short_code == 'nu':
+            print("New Account")
+            print("-"*10)
+            print("username...")
+            user_name_created = input()
+            
+            print("Password...")
+            user_password_created = input()
+            
+            print("Confirm Password...")
+            user_password_confirmed = input()
+            
+            
