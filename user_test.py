@@ -65,7 +65,7 @@ class TestCredentials(unittest.TestCase):
         object to our credential_list
         '''
         self.new_credential.save_credential()
-        test_credential = Credentials("Instagram","sophierose","123")
+        test_credential = Credentials("Instagram","sophierose","123") #new credential
         test_credential.save_credential()
         self.assertEqual(len(Credentials.credentials_list),2)
     def test_delete_credential(self):
@@ -75,10 +75,24 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.save_credential()
         test_credential = Credentials ("Instagram","sophierose","123")
         test_credential.save_credential()
-        self.new_credential.delete_credentials()
+        self.new_credential.delete_credentials() #deleting credential object
         self.assertEqual(len(Credentials.credentials_list),1)
          
-        
+    def test_credential_exists(self):
+        '''
+        test to check if we can return a Boolean if we cannot find a credential in the credential list
+        '''
+        self.new_credential.save_credential()
+        test_contact = Credentials ("Instagram","sophierose","123")
+
+        test_contact.save_credential()
+        credential_exists = Credentials.credential_exists("facebook")
+        self.assertTrue(credential_exists)
+    
+    def test_find_credential_by_name(self):
+        '''
+         test to check if we can find a contact by account name and display information
+        '''
     
     
 
