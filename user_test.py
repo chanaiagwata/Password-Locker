@@ -28,7 +28,26 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
-
+    
+class TestCredentials(unittest.TestCase):
+    '''
+     Test class that defines test cases for the User class behaviors.
+    
+    Args:
+    unittest.TestCase: TextCase class that helps in creating test cases
+    '''
+    def setUp(self):
+        '''
+        Set up a method to run before each test cases.
+        '''
+        self.new_credential = Credentials ("facebook" "chanaigwata", "268231")
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+        self.assertEqual(self.new_credential.account,"facebook")
+        self.assertEqual(self.new_credential.username,"chanaiagwata")
+        self.assertEqual(self.new_credential.password,"268231")
 
 
 
