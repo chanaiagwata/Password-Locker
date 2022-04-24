@@ -40,6 +40,11 @@ def display_credential(username):
     function to display saved usercredential
     '''
     return Credentials.display_credentials(username)
+def delete_credential(credentials):
+    '''
+    function that deletes credential from credential list
+    '''
+    Credentials.delete_credentials(credentials)
 
 def main():
     print("Hello welcome to Password Locker. What is your name?")
@@ -107,8 +112,30 @@ def main():
             else:
                 print("Welcome! You've been logged in successfully, choose an option to continue")
                 print('/n')
+                while True:
+                    print('-'*10)
+                    print("Use the following short code: cc -create credential, dc -display credential, ex -exit")
+                    short_code = input().lower().strip()
+                    print('-'*20)
+                    if short_code == 'ex':
+                        print(f'Goodbye {user_name}')
+                        break
+                    elif short_code == 'cc':
+                        print('/n')
+                        print('Create a new credential')
+                        print('-'*10)
+                        print("Account Name:")
+                        account = input().lower()
+                        print("Enter account username:")
+                        username = input()
+                        while True:
+                            print('Enter password of choice')  
+                            password = input('Enter your password').strip()
+                            break
+                save_credential(create_credential(account,username,password)) 
+                   
             
-            
+                
             
         elif short_code == 'ex':
             print("Bye...")
