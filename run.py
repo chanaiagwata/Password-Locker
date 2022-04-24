@@ -1,5 +1,45 @@
 #!/usr/bin/env python3.8
-from user import User
+from user import Credentials, User
+
+def create_user(username, password):
+    '''
+    function to create a new user
+    '''
+    new_user = User(username,password)
+    return new_user
+def save_user(user):
+    '''
+    function to save a user
+    '''
+    user.save_user()
+def del_user(user):
+    '''
+    function to delete user
+    '''
+    user.delete_contact()
+def verify_user(username,password):
+    '''
+    function that checks if user exists before creating credential
+    '''
+    check_user = Credentials.verify_user(username,password)
+    return check_user
+def create_credential(account,username,password):
+    '''
+    function that creates new user instance for user object
+    '''
+    new_credential = Credentials(account,username,password)
+    return new_credential
+def save_credential(credential):
+    '''
+    function that saves new credential
+    '''
+    Credentials.save_credential(credential)
+    
+def display_credential(username):
+    '''
+    function to display saved usercredential
+    '''
+    return Credentials.display_credentials(username)
 
 def main():
     print("Hello welcome to Password Locker. What is your name?")
