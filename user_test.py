@@ -40,7 +40,7 @@ class TestCredentials(unittest.TestCase):
         '''
         Set up a method to run before each test cases.
         '''
-        self.new_credential = Credentials ("facebook" "chanaigwata", "268231")
+        self.new_credential = Credentials ("facebook", "chanaiagwata", "268231")
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
@@ -48,7 +48,14 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credential.account,"facebook")
         self.assertEqual(self.new_credential.username,"chanaiagwata")
         self.assertEqual(self.new_credential.password,"268231")
-
+    def test_save_credential(self):
+        '''
+         test_save_credential test case to test if the credential object is saved to the credential list
+        '''
+        self.new_credential.save_credential()
+        self.assertEqual(len(Credentials.credentials_list),1)
+    
+    
 
 
 
