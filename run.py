@@ -46,7 +46,7 @@ def main():
                 print("password")
                 password_logged = input()
             else:
-                print(f"Welcome {username_logged}, you've been logged in successfully")
+                print(f"Welcome {username_logged}, you've been logged in successfully, choose an option to continue")
                 print('/n')
                 
         elif short_code == 'lg':
@@ -65,16 +65,23 @@ def main():
                 login_password = input()
                 print("/n")
             else:
-                print("Welcome! You've been logged in successfully")
+                print("Welcome! You've been logged in successfully, choose an option to continue")
                 print('/n')
             
             
             
         elif short_code == 'ex':
-            print("Bye......")
+            print("Bye...")
             break
         else:
             print("Wrong input. Please use the short codes")
+            
+            
+            
+            
+            
+            
+            
 if __name__ == '__main__':
     main()
             
