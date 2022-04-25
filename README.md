@@ -2,7 +2,7 @@
 ## By Chanai Agwata
 ### (MS School Project)
 
-* [Overall Description](https://github.com/chanaiagwata/Delani-Studio#overall-project-description)
+* [Overall Description](https://github.com/chanaiagwata/Password-Locker/tree/master#overall-project-description)
 
 * [Setup Instructions](https://github.com/chanaiagwata/Delani-Studio#setup-instructions)
 
