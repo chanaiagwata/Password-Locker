@@ -1,6 +1,7 @@
 import string
 from ast import Return
 from operator import truediv
+# from turtle import clear
 
 
 
@@ -87,8 +88,7 @@ class Credentials:
         for credential in cls.credentials_list:
             if credential.account == account:
                 return credential
-            
-    @classmethod     
+       
     def find_credential_by_name(cls, account):
         '''
         find_credential method that searches credentials by account_name.
