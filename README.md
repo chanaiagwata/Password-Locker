@@ -6,7 +6,7 @@
 
 * [Setup Instructions](https://github.com/chanaiagwata/Password-Locker/blob/master/README.md#set-up-instructions)
 
-* [License](https://github.com/chanaiagwata/Delani-Studio#license)
+* [License](https://github.com/chanaiagwata/Password-Locker/blob/master/README.md#license)
 
 * [Author's Info](https://github.com/chanaiagwata/Delani-Studio#authors-info)
 
