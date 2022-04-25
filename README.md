@@ -8,7 +8,7 @@
 
 * [License](https://github.com/chanaiagwata/Password-Locker/blob/master/README.md#license)
 
-* [Author's Info](https://github.com/chanaiagwata/Delani-Studio#authors-info)
+* [Author's Info](https://github.com/chanaiagwata/Password-Locker/blob/master/README.md#authors-info)
 
 ## Overall Project Description
 <p> This is a password management system that allows the use to create an account with their details, a login username and password. The user can also store their already existing account credentials in the application and can view account credentials and their passwords in the application </p>
