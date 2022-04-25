@@ -20,7 +20,7 @@
 * The users have the option of putting in a password that they want to use for the new credential account.
 * The user can view their various account credentials and their passwords in the application.
 * The user can delete a credentials account that I no longer need in the application.
-### How it Works
+### Set Up Instructions
 * clone the application in your local terminal;
 * Test the application $ python3.8 user_test.py
 * Run the application $ $ chmod +x user.py
