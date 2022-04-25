@@ -121,19 +121,37 @@ def main():
                         print(f'Goodbye {user_name}')
                         break
                     elif short_code == 'cc':
+                            print('/n')
+                            print('Create a new credential')
+                            print('-'*10)
+                            print("Account Name:")
+                            account = input().lower()
+                            print("Enter account username:")
+                            username = input()
+                            while True:
+                                print('Enter password of choice')  
+                                password = input('Enter your password').strip()
+                                break
+                            save_credential(create_credential(account,username,password)) 
+                            print('/n')
+                            print(f"Account credentials for {account} with username:{username}, and password:{password} created succefully")
+                            print('/n')
+                    elif short_code == 'dc':
                         print('/n')
-                        print('Create a new credential')
-                        print('-'*10)
-                        print("Account Name:")
-                        account = input().lower()
-                        print("Enter account username:")
-                        username = input()
-                        while True:
-                            print('Enter password of choice')  
-                            password = input('Enter your password').strip()
-                            break
-                save_credential(create_credential(account,username,password)) 
+                        if display_credential(username):
+                            print('These are your credentials')
+                            print('/n')
+                            for credential in display_credential(username):
+                                    print(f"account:{Credentials.account} - Username:{Credentials.username} - Password: {Credentials.password}")
+                                    print("")
+                                    break
+                        else:
+                            print("No credentials found")
+                            print('/n')
+                
+                    
                    
+                
             
                 
             
