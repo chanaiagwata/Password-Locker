@@ -23,8 +23,9 @@
 ### Set Up Instructions
 * clone the application in your local terminal;
 * Test the application $ python3.8 user_test.py
-* Run the application $ $ chmod +x run.py
-  $ ./user.py
+* Run the application $ chmod +x user.py
+  
+  $ run.py
 
 ### Languages and Frameworks
 * Python3.8
