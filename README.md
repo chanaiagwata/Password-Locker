@@ -4,7 +4,7 @@
 
 * [Overall Description](https://github.com/chanaiagwata/Password-Locker/tree/master#overall-project-description)
 
-* [Setup Instructions](https://github.com/chanaiagwata/Delani-Studio#setup-instructions)
+* [Setup Instructions](https://github.com/chanaiagwata/Password-Locker/blob/master/README.md#set-up-instructions)
 
 * [License](https://github.com/chanaiagwata/Delani-Studio#license)
 
