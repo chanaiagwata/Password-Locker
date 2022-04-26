@@ -52,6 +52,12 @@ def delete_credential(credentials):
     function that deletes credential from credential list
     '''
     Credentials.delete_credentials(credentials)
+def generate_Password():
+    '''
+    generates a random password for the user.
+    '''
+    auto_password=Credentials.generatePassword()
+    return auto_password
 
 def main():
     print("Hello welcome to Password Locker. What is your name?")
@@ -103,7 +109,7 @@ def main():
                 
                 while True:
                     print('-'*10)
-                    print("Use the following short code: cc -create credential, dc -display credential, ex -exit")
+                    print("Use the following short code: cc -create credential, gp - generate random password, dc -display credential, ex -exit")
                     short_code = input().lower().strip()
                     print('-'*20)
                     if short_code == 'ex':
@@ -117,10 +123,20 @@ def main():
                             account = input().lower().strip()
                             print("Enter account username:")
                             username = input().strip()
-                            # while True:
-                            print('Enter account password')  
-                            password = input().strip()
+                            while True:
+                                print('Select either TP- to create your own password or GP- to generate a random password')
+                                password_Choice = input().lower().strip()
+                                if password_Choice == 'tp':
+                                    print('Enter your password of choice')
+                                    password = input().lower().strip()
+                                    break
+                                elif password_Choice == 'gp':
+                                    password = generate_Password()
+                                    break
+                                else:
+                                    print('Invalid entry, try again')
                                 
+                              
                             save_credential(create_credential(account,username,password)) 
                             print('/n')
                             print(f"Account credentials for {account} with username:{username}, and password:{password} created succefully")

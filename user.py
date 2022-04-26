@@ -1,3 +1,4 @@
+import random
 import string
 from ast import Return
 from operator import truediv
@@ -75,6 +76,13 @@ class Credentials:
         delete_credential method to delete credential from credential list
         '''
         Credentials.credentials_list.remove(self)
+        
+    def generatePassword(stringLength=8):
+        '''
+        method to generate random password with letters, digits, and special characters
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase + string.digits + "~!@#$%^&*" ## characters to generate password from
+        return ''.join(random.choice(password) for i in range(stringLength))
    
     @classmethod
     def credential_exists(cls, account):
