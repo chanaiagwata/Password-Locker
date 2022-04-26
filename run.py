@@ -124,7 +124,7 @@ def main():
                             print("Enter account username:")
                             username = input().strip()
                             while True:
-                                print('Select either TP- to create your own password or GP- to generate a random password')
+                                print('Select either tp- to create your own password or gp- to generate a random password')
                                 password_Choice = input().lower().strip()
                                 if password_Choice == 'tp':
                                     print('Enter your password of choice')
@@ -179,7 +179,7 @@ def main():
                 print('-'*20)
                 while True:
                     print('-'*10)
-                    print("Use the following short code: cc -create credential, dc -display credential, ex -exit")
+                    print("Use the following short code: cc -create credential, gp - generate random password, dc -display credential, ex -exit")
                     short_code = input().lower().strip()
                     print('-'*20)
                     if short_code == 'ex':
@@ -193,9 +193,22 @@ def main():
                             account = input().lower()
                             print("Enter account username:")
                             username = input()
+                            while True:
+                                print('Select either tp- to create your own password or gp- to generate a random password')
+                                password_Choice = input().lower().strip()
+                                if password_Choice == 'tp':
+                                    print('Enter your password of choice')
+                                    password = input().lower().strip()
+                                    break
+                                elif password_Choice == 'gp':
+                                    password = generate_Password()
+                                    break
+                                else:
+                                    print('Invalid entry, try again')
+                                
                            
-                            print('Enter password of choice')  
-                            password = input().strip()
+                            # print('Enter password of choice')  
+                            # password = input().strip()
                                 
                             save_credential(create_credential(account,username,password)) 
                             print('/n')
